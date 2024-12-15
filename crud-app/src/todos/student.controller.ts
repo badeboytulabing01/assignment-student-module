@@ -18,8 +18,20 @@ export class StudentController{
     @Get()
     findMany(){
         return this.studentService.findMany();
+  
+    //update data controllrt
+
+    
+    @Put(':id')
+    update(@Param('id') id: number, @Body() dto: CreateStudentDto){
+        return this.studentService.udpate(id, dto);
     }
- 
+
+    @Delete(':id')
+    delete(@Param('id') id: number, @Body() dto: CreateStudentDto){
+        return this.studentService.delete(id);
+    }
+
 
 
 

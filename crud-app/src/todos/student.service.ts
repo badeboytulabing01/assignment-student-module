@@ -23,6 +23,32 @@ export class studentService{
     return this.studentRespository.find();
   }
 
+  //update data
+
+  async udpate(id: number, dto: CreateStudentDto){
+    
+    const student = await this.studentRespository.findOne({where: { id }})
+    
+    //check that record exist
+
+    Object.assign(student, dto);
+
+   return await this.studentRespository.save(student);
+
+
+  }
+
+  // delete data
+
+  async delete(id: number){
+    
+    const student = await this.studentRespository.findOne({where: { id }})
+    
+   return await this.studentRespository.remove(student);
+
+
+  }
+  
 
 
 
