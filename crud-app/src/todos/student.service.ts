@@ -19,6 +19,13 @@ export class studentService{
 
  //Read data
   
+  findMany(){
+    return this.studentRespository.find();
+  }
 
+
+
+
+  
 
 }
