@@ -38,7 +38,6 @@ export class studentService{
 
   }
 
-  // delete data
 
   async delete(id: number){
     
@@ -48,6 +47,7 @@ export class studentService{
 
 
   }
+
   
 
 }
