@@ -18,8 +18,7 @@ export class StudentController{
     @Get()
     findMany(){
         return this.studentService.findMany();
-    }
- 
+  
     //update data controllrt
 
     
