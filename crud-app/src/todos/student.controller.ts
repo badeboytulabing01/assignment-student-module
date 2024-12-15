@@ -14,6 +14,21 @@ export class StudentController{
         return this.studentService.create(dto);
     }
 
+   // Read Data
+    @Get()
+    findMany(){
+        return this.studentService.findMany();
+    }
+ 
+    //update data controllrt
+
+    
+    @Put(':id')
+    update(@Param('id') id: number, @Body() dto: CreateStudentDto){
+        return this.studentService.udpate(id, dto);
+    }
+
+   
 
 
 
