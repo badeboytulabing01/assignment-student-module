@@ -28,7 +28,13 @@ export class StudentController{
         return this.studentService.udpate(id, dto);
     }
 
-   
+
+
+    @Delete(':id')
+    delete(@Param('id') id: number, @Body() dto: CreateStudentDto){
+        return this.studentService.delete(id);
+    }
+
 
 
 

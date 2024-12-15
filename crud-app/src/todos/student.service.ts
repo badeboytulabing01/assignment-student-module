@@ -38,7 +38,16 @@ export class studentService{
 
   }
 
- 
+
+  async delete(id: number){
+    
+    const student = await this.studentRespository.findOne({where: { id }})
+    
+   return await this.studentRespository.remove(student);
+
+
+  }
+
   
 
 }
